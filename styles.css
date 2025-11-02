@@ -10,7 +10,7 @@ body {
 #navbar {
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 90%;
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
@@ -29,6 +29,8 @@ body {
 .logo {
   font-weight: 800;
   letter-spacing: 2px;
+  text-decoration: none;
+  color: white;
 }
 
 nav ul {
@@ -59,4 +61,31 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   font-size: 2rem;
+}
+
+/* seccion del carrusel de imagenes */
+.carrusel {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.imagenes {
+  display: flex;
+  width: 300%; /* 100% por cada imagen */
+  animation: mover 360s infinite;
+}
+
+.imagenes img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+@keyframes mover {
+  0%   { transform: translateX(0%); }
+  33%  { transform: translateX(-100%); }
+  66%  { transform: translateX(-200%); }
+  100% { transform: translateX(0%); }
 }
