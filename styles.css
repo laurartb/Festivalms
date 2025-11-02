@@ -152,11 +152,29 @@ nav a:hover {
   background-color: black;
   color: white;
   padding: 2%;
+  flex-wrap: nowrap;
 }
+
 #banner2 {
   background-color: #e7aab7;
   color: black;
   padding: 2%;
+  flex-wrap: wrap;
+}
+
+#musica {
+  display: flex;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+#musica1 {
+  width: 50%;
+}
+
+#musica2 {
+  width: 50%;
 }
 
 @keyframes mover {
