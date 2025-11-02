@@ -147,6 +147,18 @@ nav a:hover {
   object-fit: cover;
 }
 
+/* BANNERS */
+#banner {
+  background-color: black;
+  color: white;
+  padding: 2%;
+}
+#banner2 {
+  background-color: #e7aab7;
+  color: black;
+  padding: 2%;
+}
+
 @keyframes mover {
   0%   { transform: translateX(0%); }
   33%  { transform: translateX(-100%); }
