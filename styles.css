@@ -182,6 +182,31 @@ nav a:hover {
   width: 50%;
 }
 
+.carrusel-sponsors {
+  width: 100%;
+  height: 5vh;
+  overflow: hidden;
+  position: relative;
+  background-color: #f4b400;
+}
+
+.logos-sponsors {
+  display: flex;
+  width: 5%; /* 5% por cada logo */
+  height: 5vh;
+  animation: mover 30s infinite linear;
+  gap: 40px;
+}
+
+.logos-sponsors img {
+max-height: 80px; /* controla el tamaño */
+  max-width: 180px;
+  object-fit: contain;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: grayscale(100%) brightness(0.8);
+  cursor: pointer;
+}
+
 @keyframes mover {
   0%   { transform: translateX(0%); }
   33%  { transform: translateX(-100%); }
