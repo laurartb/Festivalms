@@ -254,3 +254,48 @@ max-height: 80px; /* controla el tamaño */
   text-align: center;
 }
 
+/* SECCION DE INFO */
+
+#como-llegar,
+#horarios,
+#alojamiento {
+  width: 75%;
+  height: 45vh;
+  align-self: center;
+  align-items: center;
+  position: center;
+}
+
+#como-llegar {
+  background-color: #0A08FE;
+}
+
+#horarios {
+  background-color: #e7aab7;
+} 
+
+#alojamiento {
+  background-color: #f4b400;
+}
+
+.info-ubicacion,
+.info-horarios,
+.info-alojamiento {
+  padding: 40px 20px;
+  background: rgba(20, 20, 20, 0.8);
+  color: white;
+}
+
+.info-ubicacion h1,
+.info-horarios h1,
+.info-alojamiento h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.info-ubicacion p,
+.info-horarios p,
+.info-alojamiento p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
