@@ -185,21 +185,23 @@ nav a:hover {
   width: 50%;
 }
 
-.carrusel-sponsors {
-  width: 100%;
-  height: auto;
-  position: relative;
-  background-color: #f4b400;
-}
 
-.logos-sponsors img {
+
+.logos-sponsors {
 max-height: 80px;
-  max-width: 180px;
+  max-width: 100%;
   object-fit: contain;
-  filter: black(100%);
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  background-color: #f4b400;
+  padding: 0 5%;
+}
+
+.img-sponsor{
+  height: 80px;
+  width: auto;
+  filter: grayscale(100%);
 }
 
 @keyframes mover {
