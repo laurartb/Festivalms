@@ -16,7 +16,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: transparent;
+  background: black;
   transition: all 0.4s ease;
   z-index: 1000;
   box-sizing: border-box;
