@@ -260,10 +260,8 @@ max-height: 80px; /* controla el tamaño */
 #horarios,
 #alojamiento {
   width: 75%;
-  height: 45vh;
-  align-self: center;
-  align-items: center;
-  position: center;
+  height: auto;
+  margin: 100px auto;
 }
 
 #como-llegar {
@@ -298,4 +296,12 @@ max-height: 80px; /* controla el tamaño */
 .info-alojamiento p {
   font-size: 1.2rem;
   line-height: 1.6;
+}
+
+#mapa{
+  width: auto;
+  height: auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }
