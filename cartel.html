@@ -32,40 +32,34 @@
                     <p>Mientras tanto, mantente atento a nuestras redes sociales para no perderte ninguna novedad.</p>
             </div>
         </section>
-        <!-- ===== SECCIÓN DE ARTISTAS CONFIRMADOS ===== -->
-<section class="artistas-section">
-  <h2>Artistas Confirmados</h2>
+        <section class="artistas-section">
+          <h2>Artistas Confirmados</h2>
 
-  <div class="artistas-container">
-    <div class="artista" data-artista="1">
-      <img src="imagenes/artistas/MIRANDA-2-scaled-e1686847545905.jpeg" alt="Miranda">
-      <h3>Miranda</h3>
-    </div>
+          <div class="artistas-container">
+            <div class="artista" data-artista="1">
+              <img src="imagenes/artistas/MIRANDA-2-scaled-e1686847545905.jpeg" alt="Miranda">
+              <h3>Miranda</h3>
+            </div>
 
-    <div class="artista" data-artista="2">
-      <img src="imagenes/artistas/fleek-al-safir-entrevista-lacoste-7-scaled.jpg" alt="Al Safir">
-      <h3>Al Safir</h3>
-    </div>
+            <div class="artista" data-artista="2">
+              <img src="imagenes/artistas/fleek-al-safir-entrevista-lacoste-7-scaled.jpg" alt="Al Safir">
+              <h3>Al Safir</h3>
+            </div>
 
-    <div class="artista" data-artista="3">
-      <img src="imagenes/artistas/image00002-1-1-scaled.jpeg" alt="Swit Eme">
-      <h3>Swit Eme</h3>
-    </div>
-  </div>
-</section>
-
-<!-- ===== MODAL ===== -->
-<div id="modal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <img id="modal-img" src="" alt="">
-    <h3 id="modal-title"></h3>
-    <p id="modal-description"></p>
-  </div>
-</div>
-
-<!-- ENLACE AL SCRIPT -->
-<script src="script.js"></script>
+            <div class="artista" data-artista="3">
+              <img src="imagenes/artistas/image00002-1-1-scaled.jpeg" alt="Swit Eme">
+              <h3>Swit Eme</h3>
+            </div>
+          </div>
+        </section>
+        <div id="modal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modal-img" src="" alt="">
+            <h3 id="modal-title"></h3>
+            <p id="modal-description"></p>
+          </div>
+        </div>
         <section class="music-text">
             <div id="banner">
               <h1>FESTIVAL MADRID SALVAJE 2026</h1>
@@ -82,7 +76,7 @@
                 <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3veyzN2rvVOTp8el5kqLca?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
               </div>
             </div>
-           <div class="logos-sponsors">
+            <div class="logos-sponsors">
                 <img class="img-sponsor" src="/imagenes/logos/heineken-logo-0-1.png" alt="heineken">
                 <img class="img-sponsor" src="/imagenes/logos/529-5293042_jagermeister-logo-web-jagermeister-clipart.png" alt="jagermeister">
                 <img class="img-sponsor" src="/imagenes/logos/eslogan-de-burger-king.png.webp" alt="burgerking">
@@ -90,6 +84,24 @@
                 <img class="img-sponsor" src="/imagenes/logos/JD_Sports_logo.svg.png" alt="jd">
                 <img class="img-sponsor"º src="/imagenes/logos/Coca-Cola_logo.svg.png" alt="cocacola">
               </div>
+              <section class="newsletter-section" id="newsletter">
+                <h2>Suscríbete a nuestra Newsletter</h2>
+                <p>Recibe antes que nadie las novedades, el cartel y las promociones exclusivas del Madrid Salvaje.</p>
+
+                <form id="newsletter-form">
+                  <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="Introduce tu correo electrónico" 
+                    required>
+                  <button type="submit">Suscribirme</button>
+                </form>
+
+                <p id="mensaje-form"></p>
+              </section>
+
           </section>
+       <script src="script.js"></script>
     </body>
 </html>

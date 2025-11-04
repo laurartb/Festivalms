@@ -66,3 +66,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+
+document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+  e.preventDefault(); // 1️⃣ Evita que la página se recargue
+
+  const email = document.getElementById('email').value.trim(); // 2️⃣ Coge el valor del campo email
+  const mensaje = document.getElementById('mensaje-form'); // 3️⃣ Donde mostraremos el texto de confirmación
+
+  if (email === "") { // 4️⃣ Comprueba que el campo no esté vacío
+    mensaje.textContent = "Por favor, introduce un correo válido.";
+    mensaje.style.color = "red";
+    return; // Detiene el código si no hay email
+  }
+
+  // 5️⃣ Muestra mensaje de confirmación
+  mensaje.textContent = "¡Gracias por suscribirte! Pronto recibirás nuestras novedades.";
+  mensaje.style.color = "#e7aab7";
+
+  // 6️⃣ Limpia el formulario
+  this.reset();
+});
