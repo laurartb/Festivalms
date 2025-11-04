@@ -400,3 +400,16 @@ max-height: 80px;
 .precio h2 {
   margin: 0;
 }
+
+/* MEDIA QUERY PARA MÓVIL ENTRADAS */
+@media (max-width: 768px) {
+  .entradas-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .entrada {
+    width: 90%;
+    height: auto;
+  }
+}

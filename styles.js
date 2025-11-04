@@ -16,3 +16,4 @@ submenuBtn.addEventListener('click', (e) => {
   e.preventDefault(); // evita que recargue la página
   submenuContent.classList.toggle('visible');
 });
+
