@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Prueba Modal Artistas</title>
+  <style>
+    body { background:#0a0a0a; color:#fff; font-family:Poppins, sans-serif; margin:0; }
+    .artistas-section { padding:60px 20px; text-align:center; }
+    .artistas-container { display:flex; gap:20px; justify-content:center; flex-wrap:wrap; }
+    .artista { width:220px; height:220px; border-radius:12px; overflow:hidden; cursor:pointer; position:relative; box-shadow:0 6px 18px rgba(0,0,0,.6); }
+    .artista img { width:100%; height:100%; object-fit:cover; display:block; }
+    .artista h3 { position:absolute; bottom:0; left:0; right:0; margin:0; padding:8px; background:rgba(0,0,0,.6); color:#f4b400; font-size:1rem; }
+    /* modal */
+    .modal { display:none; position:fixed; inset:0; background:rgba(0,0,0,.85); justify-content:center; align-items:center; z-index:9999; }
+    .modal.open { display:flex; }
+    .modal-content { width:90%; max-width:640px; background:#111; padding:22px; border-radius:14px; text-align:left; color:#fff; position:relative; }
+    .modal-content img { width:100%; border-radius:8px; margin-bottom:12px; display:block; }
+    .close { position:absolute; right:14px; top:10px; color:#f4b400; font-size:26px; cursor:pointer; }
+    @media (max-width:600px){ .artista{width:90%; height:180px} }
+  </style>
+</head>
+<body>
+
+<section class="artistas-section">
+  <h2 style="color:#f4b400">Artistas Confirmados</h2>
+  <div class="artistas-container">
+    <div class="artista" data-artista="1">
+      <img src="imagenes/artistas/MIRANDA-2-scaled-e1686847545905.jpeg" alt="Miranda">
+      <h3>Miranda</h3>
+    </div>
+    <div class="artista" data-artista="2">
+      <img src="imagenes/artistas/fleek-al-safir-entrevista-lacoste-7-scaled.jpg" alt="Al Safir">
+      <h3>Al Safir</h3>
+    </div>
+    <div class="artista" data-artista="3">
+      <img src="imagenes/artistas/image00002-1-1-scaled.jpeg" alt="Swit Eme">
+      <h3>Swit Eme</h3>
+    </div>
+  </div>
+</section>
+
+<!-- Modal -->
+<div id="modal" class="modal" aria-hidden="true">
+  <div class="modal-content" role="dialog" aria-modal="true">
+    <span class="close" aria-label="Cerrar">&times;</span>
+    <img id="modal-img" src="" alt="">
+    <h3 id="modal-title" style="color:#f4b400"></h3>
+    <p id="modal-description"></p>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Datos de ejemplo — ajusta rutas/textos según necesites
+  const artistas = {
+    1: {
+      nombre: "Miranda",
+      imagen: "imagenes/artistas/MIRANDA-2-scaled-e1686847545905.jpeg",
+      descripcion: "Miranda llega con su mezcla única de pop y energía eléctrica. Uno de los platos fuertes de esta edición."
+    },
+    2: {
+      nombre: "Al Safir",
+      imagen: "imagenes/artistas/fleek-al-safir-entrevista-lacoste-7-scaled.jpg",
+      descripcion: "El rapero granadino Al Safir se sube al escenario del Madrid Salvaje con su estilo inconfundible."
+    },
+    3: {
+      nombre: "Swit Eme",
+      imagen: "imagenes/artistas/image00002-1-1-scaled.jpeg",
+      descripcion: "Desde Alicante, Swit Eme trae su sonido urbano y contundente para encender la noche madrileña."
+    }
+  };
+
+  const modal = document.getElementById('modal');
+  const modalImg = document.getElementById('modal-img');
+  const modalTitle = document.getElementById('modal-title');
+  const modalDescription = document.getElementById('modal-description');
+  const closeBtn = document.querySelector('.close');
+
+  // Comprobación rápida en consola para ver que el script está corriendo
+  console.log('Script modal cargado — elementos artistas detectados:', document.querySelectorAll('.artista').length);
+
+  // Añadir listener a cada tarjeta
+  document.querySelectorAll('.artista').forEach(el => {
+    el.addEventListener('click', () => {
+      const id = el.getAttribute('data-artista');
+      const info = artistas[id];
+      if (!info) {
+        console.error('No hay datos para artista id=', id);
+        return;
+      }
+      modalImg.src = info.imagen;
+      modalTitle.textContent = info.nombre;
+      modalDescription.textContent = info.descripcion;
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+    });
+  });
+
+  // Cerrar modal con X
+  closeBtn.addEventListener('click', () => {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+  });
+
+  // Cerrar haciendo click fuera del contenido
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+    }
+  });
+
+  // Cerrar con Escape
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
