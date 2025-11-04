@@ -323,9 +323,9 @@ max-height: 80px;
   background-color: #0A08FE;
   padding: 20px;
   margin-bottom: 5%;
-  justify-content: center;
-  width: 60%;
   display: flex;
+  width: 60%;
+  margin: 0 auto 40px auto;
 }
 
 .entradas-container {
