@@ -188,7 +188,7 @@ nav a:hover {
 
 
 .logos-sponsors {
-max-height: 80px;
+max-height: 200px;
   max-width: 100%;
   object-fit: contain;
   display: flex;
@@ -572,4 +572,73 @@ max-height: 80px;
 #mensaje-form {
   margin-top: 15px;
   color: #e7aab7;
+}
+/* ===== MENÚ HAMBURGUESA ===== */
+
+.hamburguesa {
+  display: none; /* solo se muestra en móvil */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  z-index: 1100;
+  color: white;
+}
+
+.hamburguesa span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+/* Efecto de X al abrir */
+.hamburguesa.activa span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburguesa.activa span:nth-child(2) {
+  opacity: 0;
+}
+.hamburguesa.activa span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Solo visible en móvil */
+@media (max-width: 768px) {
+  .hamburguesa {
+    display: flex;
+  }
+
+  nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+  }
+
+  nav.activo {
+    display: flex;
+  }
+
+  .menu {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu li {
+    width: 100%;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
 }

@@ -87,3 +87,17 @@ document.getElementById('newsletter-form').addEventListener('submit', function(e
   // 6️⃣ Limpia el formulario
   this.reset();
 });
+
+
+// ===== MENÚ HAMBURGUESA =====
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburguesa = document.getElementById("hamburguesa");
+  const nav = document.querySelector("nav");
+
+  if (hamburguesa && nav) {
+    hamburguesa.addEventListener("click", () => {
+      hamburguesa.classList.toggle("activa");
+      nav.classList.toggle("activo");
+    });
+  }
+});
