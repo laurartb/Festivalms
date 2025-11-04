@@ -582,7 +582,12 @@ max-height: 200px;
   margin-top: 15px;
   color: #e7aab7;
 }
-/* ===== MENÚ HAMBURGUESA ===== */
+
+
+
+
+
+/* MENÚ HAMBURGUESA*/
 
 .hamburguesa {
   display: none; /* solo se muestra en móvil */
@@ -649,5 +654,51 @@ max-height: 200px;
     width: 100%;
     padding: 15px 0;
     border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+}
+
+
+/* MEDIAQUERIES RESPONSIVE */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .music-text {
+    grid-template-columns: 1fr;
+    margin: 60px auto 0 auto;
+    padding: 0 20px;
+  }
+
+  #musica1.banner2, #musica2.banner2 {
+    width: 100%;
+  }
+
+  .logos-sponsors {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .img-sponsor {
+    height: 60px;
+  }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+  #banner h1, #musica1 h1 {
+    font-size: 1.4rem;
+  }
+
+  #banner p, #musica1 p {
+    font-size: 0.9rem;
+  }
+
+  .logos-sponsors {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .img-sponsor {
+    height: 50px;
   }
 }
